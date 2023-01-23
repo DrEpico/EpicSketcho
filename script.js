@@ -16,7 +16,7 @@ function addDivs() {
         for(let i=0; i<16; i++){
             const sqr16 = document.createElement("div");
             sqr16.classList.add("child-div");
-            container.appendChild(sqr16); //might have to use for loop
+            container.appendChild(sqr16); 
         }
         console.log("userSelection value IS 16");
     } else {
