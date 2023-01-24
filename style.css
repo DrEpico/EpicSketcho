@@ -1,1 +1,11 @@
-/* hello there */
+#divs-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 290px; /*for 16x16*/
+}
+
+.child-divs {
+    border:1px #ccc solid;
+    padding: 8px;
+
+}
