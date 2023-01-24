@@ -5,15 +5,15 @@ const container = document.querySelector("#divs-container");
 const buttons = document.querySelectorAll("#btn-container button");
 buttons.forEach(button => {
     button.addEventListener("click", function() {
-        userSelection = this.innerHTML;
+        userSelection = +this.innerHTML;
         console.log(this.innerHTML);
         addDivs();
     })
 });
 
 function addDivs() {
-    if (userSelection == "16") {
-        for(let i=0; i<16; i++){
+    if (userSelection === 16) {
+        for(let i=0; i<userSelection**2; i++){
             const sqr16 = document.createElement("div");
             sqr16.classList.add("child-div");
             container.appendChild(sqr16); 
@@ -23,3 +23,5 @@ function addDivs() {
         console.log("userSelection value is NOT 16");
     }
 }
+
+//flex direction row
