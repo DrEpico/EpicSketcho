@@ -2,7 +2,7 @@ let userSelection;
 
 const container = document.querySelector("#divs-container");
 
-const buttons = document.querySelectorAll("#btn-container button");
+const buttons = document.querySelectorAll("#btn-container .canvas-size");
 buttons.forEach(button => {
     button.addEventListener("click", function() {
         userSelection = +this.innerHTML;
@@ -12,23 +12,26 @@ buttons.forEach(button => {
 });
 
 function addDivs() {
-    if (userSelection === 16) {
         container.innerHTML = "";
-        for(let i=0; i<userSelection**2; i++){
-            const sqr16 = document.createElement("div");
+        for(let i=0; i<userSelection**2; i++){ //change max width depending to the button 
+            const sqr16 = document.createElement("div");//probably change the name sqr16
             sqr16.classList.add("child-divs");
             container.appendChild(sqr16); 
         }
         console.log("userSelection value IS 16");
         const childDivs = document.querySelectorAll(".child-divs");
-        childDivs.forEach(div => {
-            div.addEventListener("mouseover", function() {
-                div.classList.add("red")
+        childDivs.forEach(function(div) {
+            div.addEventListener("mouseover", function(event) {
+                if(event.which === 1) {
+                    div.classList.add("red");
+                }
+            });
+            div.addEventListener("mousedown", function(event) {
+                if(event.which === 1) {
+                    div.classList.add("red");
+                }
             });
         });
-    } else {
-        console.log("userSelection value is NOT 16");
-    }
 }
 
 
