@@ -1,14 +1,27 @@
 #divs-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 290px; /*for 16x16*/
+    /*max-width: 290px; for 16x16*/
 }
 
 .child-divs {
     border:1px #ccc solid;
-    padding: 8px;
+    padding: 5px; /*make this smaller*/
+}
+
+.black {
+    background-color: black;
 }
 
 .red {
     background-color: red;
 }
+
+.blue {
+    background-color: blue;
+}
+
+.white {
+    background-color: white;
+}
+
