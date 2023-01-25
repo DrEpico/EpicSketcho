@@ -1,12 +1,11 @@
-#divs-container {
+#divs-container{
     display: flex;
     flex-wrap: wrap;
-    /*max-width: 290px; for 16x16*/
 }
 
 .child-divs {
-    border:1px #ccc solid;
-    padding: 5px; /*make this smaller*/
+    border:0.5px #ccc solid;
+    padding: 5px;
 }
 
 .black {
