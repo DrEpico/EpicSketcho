@@ -1,9 +1,10 @@
-let userSelection;
+let canvasSelection;
+let penSelection;
 
 const container = document.querySelector("#divs-container");
 
-const buttons = document.querySelectorAll("#btn-container .canvas-size");
-buttons.forEach(button => {
+const canvasbtn = document.querySelectorAll("#btn-container .canvas-size");
+canvasbtn.forEach(button => {
     button.addEventListener("click", function() {
         userSelection = +this.innerHTML;
         console.log(this.innerHTML);
@@ -11,25 +12,32 @@ buttons.forEach(button => {
     })
 });
 
+const colourbtn = document.querySelectorAll("#btn-container .pen-colour");
+colourbtn.forEach(button => {
+    button.addEventListener("click", function() {
+        penSelection = this.innerHTML;
+        console.log(this.innerHTML);
+    })
+});
+
 function addDivs() {
         container.innerHTML = "";
         for(let i=0; i<userSelection**2; i++){ //change max width depending to the button 
-            const sqr16 = document.createElement("div");//probably change the name sqr16
-            sqr16.classList.add("child-divs");
-            container.appendChild(sqr16); 
+            const canvas = document.createElement("div");
+            canvas.classList.add("child-divs");
+            container.appendChild(canvas); 
         }
         console.log("userSelection value IS 16");
+
         const childDivs = document.querySelectorAll(".child-divs");
         childDivs.forEach(function(div) {
             div.addEventListener("mouseover", function(event) {
                 if(event.which === 1) {
-                    div.classList.add("red");
+                    div.classList.add(penSelection);
                 }
             });
             div.addEventListener("mousedown", function(event) {
-                if(event.which === 1) {
-                    div.classList.add("red");
-                }
+                div.classList.add(penSelection);
             });
         });
 }
