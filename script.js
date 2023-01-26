@@ -36,16 +36,16 @@ function addDivs() {
         container.appendChild(canvas);
         switch (canvasSelection) {
             case 16:
-                container.style.cssText = "max-width: 195px";
+                container.style.cssText = "max-width: 160px";
                 break;
             case 32:
-                container.style.cssText = "max-width: 390px";
+                container.style.cssText = "max-width: 320px";
                 break;
             case 64:
-                container.style.cssText = "max-width: 780px";
+                container.style.cssText = "max-width: 640px";
                 break;
             case 80:
-                container.style.cssText = "max-width: 980px";
+                container.style.cssText = "max-width: 800px";
                 break;
             default:
                 break;
@@ -53,7 +53,8 @@ function addDivs() {
     }
     const childDivs = document.querySelectorAll(".child-divs");
     childDivs.forEach(function(div) {
-        div.addEventListener("mousemove", function(event) {
+        div.addEventListener("mouseover", function(event) {
+            event.preventDefault();
             if(event.which === 1) {
                 div.classList.add(penSelection);
             }
