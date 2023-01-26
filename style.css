@@ -1,3 +1,6 @@
+body{
+    background-color: beige;
+}
 #parent-container{
     display: grid;
     place-items: center;
@@ -9,7 +12,7 @@
 }
 
 .child-divs {
-    border:0.5px #ccc solid;
+    background-color: white;
     padding: 5px;
 }
 
