@@ -11,6 +11,12 @@ body{
     flex-wrap: wrap;
 }
 
+
+#resetbtn-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .child-divs {
     background-color: white;
     padding: 5px;
@@ -32,3 +38,62 @@ body{
     background-color: white;
 }
 
+#black-pen{
+    background-color: #333333; 
+  color: #ffffff; 
+}
+
+#red-pen{
+    background-color: #ff3333; 
+    color: #ffffff; 
+}
+
+#blue-pen{
+    background-color: #3366ff; 
+    color: #ffffff; 
+}
+
+#white-pen{
+    background-color: #f2f2f2; 
+    color: #000000; 
+}
+/*#black-pen{
+    background-color: black;
+}
+
+#red-pen{
+    background-color: red;
+    color: red;
+}
+
+#blue-pen{
+    background-color: blue;
+    color: blue;
+}
+
+#white-pen{
+    background-color: white;
+    color: white
+}*/
+
+button{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-color: rgb(73, 73, 73);
+    border-radius: 10%;
+    background-color: rgb(240, 240, 240);
+}
+
+h1{
+    margin: 5px;
+}
+
+h2{
+    margin: 5px;
+}
+
+h3{
+    margin: 5px;
+}
